@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+main {
+    width: 80%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.75em; /* 75% larger than the default font size */
+}
+
+main > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+main > div > div {
+    background-color: #d3d3d3;
+    border: 1px solid black;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+}
+
+main > div > div > div {
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    border: 1px solid black;
+    font-size: 1.25em; /* 25% larger than the default font size */
+}
+
+main > div > div:nth-child(1) > div {
+    background-color: #f4b6b6;
+}
+
+main > div > div:nth-child(2) > div {
+    background-color: #d9534f;
+}
+
+main > div > div:nth-child(3) > div {
+    background-color: #f0e68c;
+}
+
+p {
+    margin: 40px 0 0; /* Push down the text to avoid overlapping with section title */
+}
+
+/* Desktop view */
+@media (min-width: 992px) {
+    main > div > div {
+        width: 32%; /* Each section takes up equal amount of space */
+    }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+    main > div > div {
+        width: 48%; /* First 2 sections take up equal size */
+    }
+    main > div > div:nth-child(3) {
+        width: 100%; /* 3rd section takes up entire row */
+    }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    main > div > div {
+        width: 100%; /* Each section takes up the entire row */
+    }
+}
