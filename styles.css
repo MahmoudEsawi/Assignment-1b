@@ -64,23 +64,23 @@ main > div > div:nth-child(3) > div {
 }
 
 p {
-    margin: 40px 0 0; /* Push down the text to avoid overlapping with section title */
+    margin: 40px 0 0; 
 }
 
 /* Desktop view */
 @media (min-width: 992px) {
     main > div > div {
-        width: 32%; /* Each section takes up equal amount of space */
+        width: 32%; 
     }
 }
 
 /* Tablet view */
 @media (min-width: 768px) and (max-width: 991px) {
     main > div > div {
-        width: 48%; /* First 2 sections take up equal size */
+        width: 48%; 
     }
     main > div > div:nth-child(3) {
-        width: 100%; /* 3rd section takes up entire row */
+        width: 100%; 
     }
 }
 
